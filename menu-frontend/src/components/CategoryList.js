@@ -30,7 +30,7 @@ const CategoryList = (props) => {
       </div>
 
       <Modal trigger={<div className="modalCard">
-        <h5>{attributes.name}</h5>
+        <h4>{attributes.name}</h4>
         <p>{attributes.description}</p>
         <br/>
       </div>}>

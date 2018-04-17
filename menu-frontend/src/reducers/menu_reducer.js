@@ -6,7 +6,8 @@ const defaultState = {
   selectedItem:{},
   flashCard:{},
   cardClicked:false,
-  filteredItems:[]
+  filteredItems:[],
+  menuTitle:""
   }
 
 

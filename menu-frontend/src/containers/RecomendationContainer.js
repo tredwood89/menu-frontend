@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { options } from '../SeedInfo'
-import { Dropdown, Grid, Segment } from 'semantic-ui-react';
+import { Dropdown, Grid, Segment, Container } from 'semantic-ui-react';
 import { addRecomendation, removeRecomendation } from '../actions/MenuAction';
 import RecomendationComponent from '../components/RecomendationComponent';
 
@@ -117,7 +117,9 @@ class RecomendationContainer extends React.Component {
             </Grid.Row>
           </Grid>
           </div>
-
+          <Container>
+            <RecomendationComponent/>
+          </Container>
       </div>
     )
   }
