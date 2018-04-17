@@ -10,6 +10,13 @@ export const fetchMenu = (menuItems) => {
   }
 }
 
+export const menuSelect = (menuId) => {
+  return {
+    type: 'MENU_ID',
+    payload:menuId
+  }
+}
+
 export const selectItem = (menuItem) => {
   return {
     type: 'SELECT_ITEM',

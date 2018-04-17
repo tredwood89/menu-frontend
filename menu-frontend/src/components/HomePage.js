@@ -1,4 +1,6 @@
 import React from 'react';
+import SelectMenu from '../components/SelectMenu'
+
 
 const HomePage = () => {
 
@@ -6,6 +8,7 @@ const HomePage = () => {
   return (
     <div>
       <h1>Home is HERe</h1>
+      <SelectMenu/>
     </div>
   )
 }

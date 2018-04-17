@@ -15,10 +15,25 @@ export const menu_reducer = ( state=defaultState, action) => {
   switch (action.type) {
 
     case 'LOAD_MENU':
+    console.log(action.payload.data);
+    let menuTitle = state.menuTitle
+    let menuData = action.payload.data
+    let itemArr = menuData.filter( item => {
+      return item.attributes.menu === menuTitle
+    })
+    console.log(itemArr);
       return {
         ...state,
-        menu: [...state.menu, action.payload.data]
+          menu: [...state.menu, itemArr]
       }
+
+      case 'MENU_ID':
+      // console.log('here');
+      // console.log(action.payload);
+        return {
+          ...state,
+            menuTitle:action.payload
+        }
 
     case 'SELECT_ITEM':
       return {
@@ -58,7 +73,6 @@ export const menu_reducer = ( state=defaultState, action) => {
 
         return {
           ...state,
-
             filteredItems: [ filteredMenu ]
         }
 

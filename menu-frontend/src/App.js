@@ -16,9 +16,6 @@ import HomePage from './components/HomePage';
 class App extends Component {
 
 
-  componentDidMount(){
-    this.props.fetchMenu()
-  }
 
   render() {
     return (
