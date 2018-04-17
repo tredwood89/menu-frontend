@@ -7,7 +7,7 @@ import ItemDetail from './components/ItemDetail';
 import FlashComponent from './components/FlashComponent'
 import RecomendationContainer from './containers/RecomendationContainer';
 import RecomendationComponent from './components/RecomendationComponent';
-
+import { Route } from 'react-router-dom'
 
 class App extends Component {
 
@@ -35,6 +35,7 @@ class App extends Component {
       <div id="scroll">
          <MenuContainer/>
        </div>
+       <br/>
        <Container>
          <ItemDetail />
        </Container>
