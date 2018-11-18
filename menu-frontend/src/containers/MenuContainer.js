@@ -6,6 +6,11 @@ import { fetchMenu } from '../actions/MenuAction'
 import uuid from 'uuid'
 import { Grid, Container, Header } from 'semantic-ui-react';
 import { Parallax, Background } from 'react-parallax';
+import SidesAddsSmall from '../pics/SidesAddsSmall.png';
+import Entree from '../pics/Entree.png';
+import Appetizer from '../pics/Appetizer.png';
+import Sides from '../pics/Sides.png'
+import Dessert from '../pics/Dessert.png'
 
 
 
@@ -49,37 +54,47 @@ class MenuContainer extends React.Component {
     fontFamily: 'sans-serif',
     textAlign: 'center',
   };
-  const insideStyles = {background: 'white', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
+  const insideStyles = { color:'white', padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)'};
   const image1 = "https://images.unsplash.com/photo-1498092651296-641e88c3b057?auto=format&fit=crop&w=1778&q=60&ixid=dW5zcGxhc2guY29tOzs7Ozs%3D";
   const image2 = "https://v478pa.bn1.livefilestore.com/y2m2yJeC7UfWJ9AiIG8Lm4_K5BiN1yRU84tMlBtxQ-7Llr9oV4XYEYyr8l0j8eXPbFroKrD1f9KKjY_jURbKC5lA_rS6h6mOBZVgCeZknD6I9VAl126yEzdzPTXk0KX_Tdd/air.jpg?psid=1";
   const image3 = "https://brightcove04pmdo-a.akamaihd.net/5104226627001/5104226627001_5297440765001_5280261645001-vs.jpg?pubId=5104226627001&videoId=5280261645001";
 
     return (
       <div style={styles}>
-    <h1>Menu</h1>
-    <Parallax bgImage={image1}
+    <h1>
+
+      Select a Menu item for more detail.
+    </h1>
+    <br/>
+    <Parallax bgImage={Appetizer}
       strength={500}>
       <div style={{height: 200}}>
-        <div style={insideStyles}>Appetizers</div>
+        <h2 style={insideStyles}>Appetizers</h2>
+
       </div>
     </Parallax>
+    <br/>
      <div id="scroll">
+
        {appetizer}
      </div>
-    <Parallax bgImage={image3} blur={{min: -1,max:3}}>
+    <Parallax bgImage={Entree} blur={{min: -1,max:3}}>
       <div style={{height: 200}}>
-        <div style={insideStyles}>Entrees</div>
+        <h2 style={insideStyles}>Entrees</h2>
       </div>
     </Parallax>
+    <br/>
+
     <div id="scroll">
       {entree}
     </div>
-    <Parallax bgImage={image1}
+    <Parallax bgImage={Sides}
       strength={500}>
       <div style={{height: 200}}>
-        <div style={insideStyles}>Sides and Adds</div>
+        <h2 style={insideStyles}>Sides and Adds</h2>
       </div>
     </Parallax>
+    <br/>
 
     <div id="scroll">
       <Grid columns='equal'>
@@ -100,11 +115,13 @@ class MenuContainer extends React.Component {
 
       </Grid>
       </div>
-    <Parallax bgImage={image2} strength={-100}>
+    <Parallax bgImage={Dessert} strength={-100}>
       <div style={{height: 200}}>
-        <div style={insideStyles}>Desserts</div>
+        <h2 style={{padding: 20, position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%,-50%)', color: 'white'}}>Desserts</h2>
       </div>
     </Parallax>
+    <br/>
+
     <div id="scroll">
       {dessert}
       </div>

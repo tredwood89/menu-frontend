@@ -7,7 +7,8 @@ const defaultState = {
   flashCard:{},
   cardClicked:false,
   filteredItems:[],
-  menuTitle:""
+  menuTitle:"",
+  flashCardOption:false
   }
 
 
@@ -42,13 +43,20 @@ export const menu_reducer = ( state=defaultState, action) => {
       }
     case 'GET_CARD':
       let number = Math.floor((Math.random() * 5) + 1)
+      let option = state.flashCardOption
       return {
         ...state,
-      flashCard:flashCardInfo[number],
+      flashCard:flashCardInfo[option][number],
       cardClicked:false,
       selectedItem:{}
 
       }
+      case 'SET_FLASHCARD':
+      console.log(action.payload);
+        return {
+          ...state,
+            flashCardOption:action.payload
+        }
 
       case 'FLIP_CARD':
         return {

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { connect } from  'react-redux';
-import { Card, Icon, Button, Grid } from 'semantic-ui-react';
+import { Card, Icon, Button, Grid , Segment, Header, Image } from 'semantic-ui-react';
 
 const RecomendationComponent = (props) => {
 
@@ -12,22 +12,22 @@ const RecomendationComponent = (props) => {
 
       return (
         <div>
-            <Card
-              image = {prop.attributes.url}
-              header = {prop.attributes.name}
-              description = {prop.attributes.description}
-             />
+          <Card >
+            <Image src={prop.attributes.url} size="mediumCard"/>
+            <Header>{prop.attributes.name}</Header>
+            
+            {prop.attributes.description}
+          </Card>
+
         </div>)
     }
   }
 
   return(
     <div>
-      <div>
 
-            {displayRecommendations(props.recItem)}
+        {displayRecommendations(props.recItem)}
 
-      </div>
     </div>
   )
 }

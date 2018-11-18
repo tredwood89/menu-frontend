@@ -1,5 +1,6 @@
 import React from 'react';
 import SelectMenu from '../components/SelectMenu'
+import { Container } from 'semantic-ui-react';
 
 
 const HomePage = () => {
@@ -7,8 +8,10 @@ const HomePage = () => {
 
   return (
     <div>
-      <h1>Home is HERe</h1>
-      <SelectMenu/>
+      <Container textAlign="center">
+        <h1>Select a Menu to Begin</h1>
+        <SelectMenu/>
+      </Container>
     </div>
   )
 }

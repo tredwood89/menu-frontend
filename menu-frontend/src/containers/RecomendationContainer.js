@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { options } from '../SeedInfo'
-import { Dropdown, Grid, Segment, Container } from 'semantic-ui-react';
+import { Dropdown, Grid, Segment, Container, Sticky } from 'semantic-ui-react';
 import { addRecomendation, removeRecomendation } from '../actions/MenuAction';
 import RecomendationComponent from '../components/RecomendationComponent';
 
@@ -82,10 +82,10 @@ class RecomendationContainer extends React.Component {
         return  (
               <div>
 
-                <Grid.Column centered="true" columns={4}>
+                <Grid.Column>
                   <RecomendationComponent  recItem={item}/>
                  </Grid.Column>
-
+                 <br/>
               </div>
             )
       })
@@ -105,21 +105,24 @@ class RecomendationContainer extends React.Component {
     }
 
     return(
-      <div>
+      <div >
+
         <div>
-            <Dropdown placeholder='Search by Guest Recommendation' fluid multiple search selection options={options} onChange={this.handleOnChange}/>
+         Enter in guest request to find menu items that meets their needs
         </div>
         <br/>
+              <Dropdown placeholder='Search by Guest Recommendation' fluid multiple search selection options={options} onChange={this.handleOnChange}/>
+        <br/>
+          <br/>
+
         <div>
-          <Grid columns='equal'>
-            <Grid.Row>
+          <Grid  centered columns={4} >
+
                 {optionArr}
-            </Grid.Row>
+
           </Grid>
-          </div>
-          <Container>
-            <RecomendationComponent/>
-          </Container>
+        </div>
+
       </div>
     )
   }

@@ -51,3 +51,11 @@ export const removeRecomendation = (options) => {
     payload:options
   }
 }
+
+export const setFlashOption = (option) => {
+
+  return {
+    type:'SET_FLASHCARD',
+    payload: option
+  }
+}

@@ -32,6 +32,9 @@
   to { transform: rotate(360deg); }
 }
 
+/*body {
+  background-image: "https://www.pinterest.com/pin/854558098014133049/"
+}*/
 div.scrollmenu {
     background-color: #333;
     overflow: auto;
