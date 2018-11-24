@@ -1,5 +1,11 @@
 # Menu - Service Side #
 
+## Demo ##
+
+[https://www.youtube.com/watch?v=B7Jrx9H3y0w]
+
+## About ##
+
 Menu - Service Side is restaurant training tool. Here, newly hired team-members will be able
 to increase their menu knowledge to provide better guest experiences
 The features involed to facilitate that learing are :
@@ -27,8 +33,4 @@ The features involed to facilitate that learing are :
  -  **Frontend**: React. JS, Redux
  -  **Styled**: Semantic UI  React and raw CSS
  -  **Backend**: Ruby on Rails
-
-## Demo ##
-
-[https://www.youtube.com/watch?v=B7Jrx9H3y0w]
 
