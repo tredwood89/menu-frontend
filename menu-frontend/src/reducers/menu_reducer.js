@@ -42,6 +42,7 @@ export const menu_reducer = ( state=defaultState, action) => {
           selectedItem: action.payload
       }
     case 'GET_CARD':
+    console.log(flashCardInfo);
       let number = Math.floor((Math.random() * 5) + 1)
       let option = state.flashCardOption
       return {

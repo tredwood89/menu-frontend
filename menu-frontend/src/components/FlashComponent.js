@@ -10,14 +10,16 @@ class FlashComponent extends React.Component {
 
 
      flashCardDisplay = (prop) => {
+       console.log(prop);
+       console.log(this.props);
       return (
         prop ?
-      ( <Segment  padded="true" compact="true" textAlign='center'>
+      ( <Segment  padded textAlign='center'  compact >
         <Image alt=""  size='medium' src={this.props.flashCard.url}/>
-        <p style={{"background-color":"yellow"}}><strong>{this.props.flashCard.back}</strong></p>
+        <p style={{"backgroundColor":"yellow"}}><strong>{this.props.flashCard.back}</strong></p>
         </Segment> )
            :
-      (<Segment  size="massive"padded="very" compact="true">
+      (<Segment  size="massive"padded="very" compact >
         {this.props.flashCard.front}
       </Segment>)
       )
@@ -37,7 +39,6 @@ class FlashComponent extends React.Component {
       }
 
 render(){
-
 
   let  options = this.createFlashOptions(flashKeys())
 
@@ -65,8 +66,7 @@ render(){
 
       <div onClick={()=>this.props.flipCard()}>
           {this.flashCardDisplay(this.props.cardClicked)}
-        </div>
-
+      </div>
 
         <Button icon position='right' className="mini" onClick={()=>this.props.getFlashCard()}>
           <Icon name='right arrow' />
@@ -75,7 +75,7 @@ render(){
       </Grid>
     </div>
   )
-  }
+ }
 }
 
 const mapStateToProps = (state) => {
