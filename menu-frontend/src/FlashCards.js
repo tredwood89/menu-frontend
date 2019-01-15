@@ -57,7 +57,7 @@ export const flashKeys = () => {
       4:{
         front:"Moscow Mule",
         back:"Vodka, Ginger Beer, Lime Juice",
-        url:"http://www.cozyna.com/wp-content/uploads/2016/01/moscowmule-hero-300x200.jpg"
+        url:"https://cdn.liquor.com/wp-content/uploads/2017/03/07152853/moscow-mule-720x720-recipe.jpg"
       },
       5:{
         front:"Cosmopolitian",

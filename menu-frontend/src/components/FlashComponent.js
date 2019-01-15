@@ -10,8 +10,7 @@ class FlashComponent extends React.Component {
 
 
      flashCardDisplay = (prop) => {
-       console.log(prop);
-       console.log(this.props);
+
       return (
         prop ?
       ( <Segment  padded textAlign='center'  compact >
@@ -38,7 +37,28 @@ class FlashComponent extends React.Component {
         this.props.setFlashOption(flashOpt)
       }
 
+      // startFlashCard = (subjectSelected) =>{
+      //
+      //   subjectSelected
+      //   ?
+      //     (<Button  className="mini" onClick={()=>this.props.getFlashCard()}>
+      //     Start FlashCards
+      //     </Button>)
+      //   :
+      //     null
+      // }
+
+
 render(){
+
+  const startFlashCard = this.props.subjectSelected ?
+
+      (<Button  className="mini" onClick={()=>this.props.getFlashCard()}>
+      Start FlashCards
+      </Button>)
+    :
+      null
+
 
   let  options = this.createFlashOptions(flashKeys())
 
@@ -57,10 +77,8 @@ render(){
       </div>
       <br/>
       <Grid.Row>
-        <Button  className="mini" onClick={()=>this.props.getFlashCard()}>
-          Start FlashCards
-          </Button>
-        </Grid.Row>
+        {startFlashCard}
+      </Grid.Row>
 
       <br/>
 
@@ -82,7 +100,8 @@ const mapStateToProps = (state) => {
 
   return {
     flashCard: state.flashCard,
-    cardClicked: state.cardClicked
+    cardClicked: state.cardClicked,
+    subjectSelected: state.flashCardOption
   }
 
 }
