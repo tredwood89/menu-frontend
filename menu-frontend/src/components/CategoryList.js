@@ -1,28 +1,21 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { selectItem } from '../actions/MenuAction'
-import { Image, Segment, Modal, Header  } from "semantic-ui-react";
+import { Image, Modal, Header  } from "semantic-ui-react";
 
 
 const CategoryList = (props) => {
   const  { attributes } = props.menuItem
 
-  const handleClick = () => {
-     props.selectItem(attributes)
-    // props.openModal(attributes)
+  const capitalize = (string) => {
+    return string[0].toUpperCase() + string.slice(1)
   }
-
-
-
- const capitalize = (string) => {
-   return string[0].toUpperCase() + string.slice(1)
- }
- const capitalizeArr = (arr) => {
+  const capitalizeArr = (arr) => {
    let capArr = arr.map( word => {
     return  capitalize(word)
-   })
-   return capArr.join(", ")
- }
+    })
+    return capArr.join(", ")
+   }
 
   return(
     <div>

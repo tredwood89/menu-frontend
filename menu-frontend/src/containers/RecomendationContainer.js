@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { options } from '../SeedInfo'
-import { Dropdown, Grid, Segment, Container, Sticky } from 'semantic-ui-react';
+import { Dropdown, Grid } from 'semantic-ui-react';
 import { addRecomendation, removeRecomendation } from '../actions/MenuAction';
 import RecomendationComponent from '../components/RecomendationComponent';
 

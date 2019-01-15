@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Image, Segment, Modal, Header  } from "semantic-ui-react";
+import { Image, Modal, Header  } from "semantic-ui-react";
 
 
 const ItemDetail = (props) => {

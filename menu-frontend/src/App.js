@@ -4,13 +4,9 @@ import { connect } from 'react-redux';
 import { fetchMenu } from './actions/MenuAction'
 import MenuContainer from './containers/MenuContainer';
 import { Container, Header, Grid } from "semantic-ui-react";
-import ItemDetail from './components/ItemDetail';
-// import FlashCardContainer from './containers/FlashCardContainer';
 import FlashComponent from './components/FlashComponent'
 import RecomendationContainer from './containers/RecomendationContainer';
-import RecomendationComponent from './components/RecomendationComponent';
-import { Route, NavLink, withRouter } from 'react-router-dom'
-import { Parallax, Background } from 'react-parallax';
+import { Route, withRouter } from 'react-router-dom'
 import HomePage from './components/HomePage';
 import NavBar from './components/NavBar'
 

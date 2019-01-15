@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Icon, Button, Segment, Image, Menu, Dropdown, Container } from "semantic-ui-react";
+import { Grid, Icon, Button, Segment, Image, Dropdown } from "semantic-ui-react";
 import { connect } from 'react-redux';
 import { getFlashCard, flipCard, setFlashOption} from '../actions/MenuAction'
 import { flashKeys } from '../FlashCards'
