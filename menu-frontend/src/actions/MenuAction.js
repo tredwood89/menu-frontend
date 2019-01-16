@@ -1,7 +1,7 @@
 export const fetchMenu = (menuItems) => {
 
   return (dispatch) => {
-    return fetch('http://localhost:3001/api/v1/items')
+    return fetch('https://menu-backend-api.herokuapp.com/api/v1/items')
       .then((res)=>res.json())
       .then((menuItems)=> dispatch({
         type: 'LOAD_MENU',

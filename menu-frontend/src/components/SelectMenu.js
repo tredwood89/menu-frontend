@@ -13,7 +13,7 @@ class SelectMenu extends React.Component {
   }
 
   fetchMenuOptions = () => {
-    fetch('http://localhost:3001/api/v1/menus')
+    fetch('https://menu-backend-api.herokuapp.com/api/v1/items')
       .then( res => res.json())
       .then(menus => this.setState({
         ...this.state,
@@ -27,9 +27,7 @@ class SelectMenu extends React.Component {
   }
 
   createOptions = (arr) =>{
-    let i = 0
-    return arr.map( el => {
-      ++i
+    return arr.map( el, i => {
       return {key:`${i}`, text:`${el}`, value:`${i}`}
     })
   }
@@ -43,10 +41,8 @@ class SelectMenu extends React.Component {
   render(){
 
       let menuTitles = this.state.menuSelection
-      let options
-      if (menuTitles){
-        options = this.createOptions(menuTitles)
-      }
+      let options = menuTitle ? this.createOptions(menuTitles) : null
+      
 
     return(
       <div>
